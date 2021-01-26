@@ -1,7 +1,7 @@
-src.Plot module
-===============
+mnultitool.plot module
+======================
 
-.. automodule:: src.Plot
+.. automodule:: mnultitool.plot
       :members:
       :undoc-members:
       :show-inheritance:

@@ -4,13 +4,13 @@
    :maxdepth: 4
    :caption: Miscellanous:
 
-   src.misc
+   mnultitool.misc
    
 .. toctree::
    :maxdepth: 4
    :caption: Interpolation:
 
-   src.interpolate
+   mnultitool.interpolate
    
 .. toctree::
    :maxdepth: 4

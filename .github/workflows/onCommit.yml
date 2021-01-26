@@ -36,7 +36,7 @@ jobs:
           publish_branch: gh-pages
 
       - name: Build package
-        run: PATH="$HOME/.local/bin:$PATH" python3 setup.py sdist bdist_wheel
+        run: cd scripts && PATH="$HOME/.local/bin:$PATH" source package.bash
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@master

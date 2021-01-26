@@ -28,6 +28,6 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
     ],
     keywords='numerical,math,interpolation',
-    package_dir={'': 'src'},
+    package_dir={'': 'mnultitool'},
     python_requires='>=3.6, <4',
 )

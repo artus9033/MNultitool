@@ -1,7 +1,7 @@
-src.Matrix module
-=================
+mnultitool.matrix module
+========================
 
-.. automodule:: src.Matrix
+.. automodule:: mnultitool.matrix
       :members:
       :undoc-members:
       :show-inheritance:

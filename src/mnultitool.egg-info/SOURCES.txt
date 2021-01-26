@@ -1,7 +1,0 @@
-README.md
-setup.py
-src/mnultitool.egg-info/PKG-INFO
-src/mnultitool.egg-info/SOURCES.txt
-src/mnultitool.egg-info/dependency_links.txt
-src/mnultitool.egg-info/top_level.txt
-test/testMisc.py
