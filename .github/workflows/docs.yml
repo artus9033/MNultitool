@@ -13,9 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Install TexLive
+      # Install TexLive & Sphinx
       - name: Install TexLive
-        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng
+        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng python3-sphinx
 
       - name: Build docs
         run: cd ./scripts && source buildDocs.bash
