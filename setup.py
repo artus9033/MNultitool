@@ -6,7 +6,7 @@ long_description = (pathlib.Path(__file__).parent.resolve() /
                     'README.md').read_text(encoding='utf-8')
 
 setup(
-    name='MNultitool',
+    name='mnultitool',
     version='1.0.0',
     description='A multitool for Numerical Methods',
     long_description=long_description,

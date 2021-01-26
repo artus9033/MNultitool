@@ -10,7 +10,7 @@ This module assumes you are using python `3.x` & have the following packages ins
 
 ## Installation
 
-To install, run `pip install MNultitool`
+To install, run `pip install mnultitool`
 
 ## Docs
 
