@@ -3,3 +3,4 @@ scipy
 matplotlib
 sphinx
 sphinx-autodoc-typehints
+sphinx-rtd-theme
