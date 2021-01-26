@@ -13,18 +13,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Install TexLive & Sphinx
       - name: Update APT
         run: sudo apt-get update
 
-      # Install TexLive & Sphinx
-      - name: Install TexLive
+      - name: Install TexLive & Sphinx
         run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng python3-sphinx
+
+      - name: Install required Sphinx extensions
+        run: cd ./scripts && pip3 install -r requirements.txt
 
       - name: Build docs
         run: cd ./scripts && source buildDocs.bash
 
-      # Deploy HTML documentation to GitHub Pages
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
