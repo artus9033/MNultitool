@@ -1,21 +1,37 @@
-.. MNultitool documentation master file, created by
-   sphinx-quickstart on Tue Jan 26 16:09:21 2021.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to MNultitool's documentation!
-======================================
+.. mdinclude:: ../../README.md
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 4
+   :caption: Miscellanous:
 
-.. include:: modules.rst
+   src.misc
+   
+.. toctree::
+   :maxdepth: 4
+   :caption: Interpolation:
 
+   src.interpolate
+   
+.. toctree::
+   :maxdepth: 4
+   :caption: Plotting:
 
-Indices and tables
-==================
+   manual/plot
+   
+.. toctree::
+   :maxdepth: 4
+   :caption: Matrix operations:
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   manual/matrix
+
+.. toctree::
+   :maxdepth: 4
+   :caption: All modules:
+
+   modules
+
+.. toctree::
+   :maxdepth: 4
+   :caption: Indices and tables
+
+   manual/indices_and_tables
