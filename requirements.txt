@@ -6,3 +6,4 @@ sphinx-autodoc-typehints
 sphinx-rtd-theme
 m2r2
 autodocsumm
+pathlib

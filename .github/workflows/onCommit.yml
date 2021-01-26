@@ -7,7 +7,7 @@ on:
     branches: [master]
 
 jobs:
-  build-docs:
+  build-and-publish-docs:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,8 +35,11 @@ jobs:
           force_orphan: true
           publish_branch: gh-pages
 
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@master
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}
+  build-and-publish-package:
+    - name: Build package
+      run: PATH="$HOME/.local/bin:$PATH" python3 setup.py sdist bdist_wheel
+    - name: Publish to PyPI
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: __token__
+        password: ${{ secrets.PYPI_API_TOKEN }}
