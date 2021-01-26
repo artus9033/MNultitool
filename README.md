@@ -14,4 +14,4 @@ To install, run `pip install MNultitool`
 
 ## Docs
 
-Docs are available [here](TODO) and are automatically compiled after each commit.
+Docs are available [here](https://artus9033.github.io/MNultitool/index.html) and are automatically compiled after each commit.

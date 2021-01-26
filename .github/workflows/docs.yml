@@ -20,7 +20,7 @@ jobs:
         run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng
 
       - name: Install required Sphinx extensions
-        run: cd ./scripts && pip3 install -r requirements.txt
+        run: pip3 install -r requirements.txt
 
       - name: Build docs
         run: cd ./scripts && PATH="$HOME/.local/bin:$PATH" source buildDocs.bash
