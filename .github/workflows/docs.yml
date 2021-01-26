@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get update
 
       - name: Install TexLive & Sphinx
-        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng
+        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng python3-setuptools
 
       - name: Install required Sphinx extensions
         run: PATH="$HOME/.local/bin:$PATH" pip3 install -r requirements.txt
