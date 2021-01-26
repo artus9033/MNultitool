@@ -17,10 +17,10 @@ jobs:
         run: sudo apt-get update
 
       - name: Install TexLive & Sphinx
-        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng python3-sphinx python-sphinx
+        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng python3-sphinx
 
       - name: Install required Sphinx extensions
-        run: cd ./scripts && pip3 install -r requirements.txt && pip install -r requirements.txt
+        run: cd ./scripts && pip3 install -r requirements.txt
 
       - name: Build docs
         run: cd ./scripts && source buildDocs.bash
