@@ -4,7 +4,8 @@ import numpy as np
 
 
 def cylinderArea(r: float, h: float):
-    """Computes the total area of a cylinder
+    """
+    Computes the total area of a cylinder
 
     :param r: cylinder base radius
     :param h: cylinder height
@@ -20,10 +21,11 @@ def cylinderArea(r: float, h: float):
 
 
 def fibonacci(n: int):
-    """Computes the first n Fibonacci's sequence elements
+    """
+    Computes the first n Fibonacci's sequence elements
 
     Parameters:
-    n (int): the amount of elements
+    :param n: the amount of elements
 
     :return: n first Fibonacci's sequence elements
     :rtype: np.ndarray

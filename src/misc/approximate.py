@@ -6,14 +6,13 @@ from .utils import isType
 
 
 def exponential(x: Union[int, float], n: int) -> float:
-    """Computes an approximation of e^x
+    """
+    Computes an approximation of e^x
 
-    Parameters:
-    x Union[int, float]: the exponent
-    n Union[int]: the amount of sequence elements (increases precision)
+    :param x: x
+    :param k: k
 
-    Returns:
-    exp_approx float: the approximated value
+    :return: the approximated value
     """
 
     acc = 0
@@ -31,16 +30,16 @@ def exponential(x: Union[int, float], n: int) -> float:
 
 
 def coskx1(k: int, x: Union[int, float]) -> float:
-    """Computes an approximation of cos(kx) using the formula:
+    """
+    Computes an approximation of cos(kx) using the formula:
+
     .. math::
         cos((m+1)x) = 2cos(x) * cos(mx) - cos((m-1)x)
 
-    Parameters:
-    x Union[int, float]: x
-    k Union[int]: k
+    :param x: x
+    :param k: k
 
-    Returns:
-    coskx float: approximated cos(kx) value
+    :return: the approximated value
     """
 
     try:
@@ -77,10 +76,12 @@ def coskx1(k: int, x: Union[int, float]) -> float:
 
 
 def cossinkx2(k: int, x: Union[int, float]) -> Tuple[float, float]:
-    """Computes an approximation of cos(kx) & sin(kx) using the formulas:
+    """
+    Computes an approximation of cos(kx) & sin(kx) using the formulas:
 
     .. math::
         cos(mx) = cosx \cdot cos(m-1)x - sinx \cdot sin(m-1)x
+    .. math::
         sin(mx) = sinx \cdot cos(m-1)x + cosx \cdot sin(m-1)x
 
     :param x: x
@@ -110,12 +111,10 @@ def pi(n: int) -> float:
     .. math::
         \sum_{n=1}^{\infty} \cfrac{1}{n^2} = \cfrac{1}{6} \pi^2
 
-    Parameters:
-    n Union[int, List[int], np.ndarray[int]]: the amount of 
 
-    Returns:
-    pi_aprox float: przybliżenie stałej pi,
-                    NaN w przypadku błędnych danych wejściowych
+    :param n: the amount of sum elements
+
+    :return: the approximated value of pi
     """
 
     if isType(n, int) and n > 0:
