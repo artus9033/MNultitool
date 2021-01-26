@@ -17,6 +17,9 @@ jobs:
       - name: Install TexLive
         run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng
 
+      - name: Build docs
+        run: cd ./scripts && source buildDocs.bash
+
       # Deploy HTML documentation to GitHub Pages
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
