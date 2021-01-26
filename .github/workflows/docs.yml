@@ -22,11 +22,8 @@ jobs:
       - name: Install required Sphinx extensions
         run: cd ./scripts && pip3 install -r requirements.txt
 
-      - name: Test sphinx
-        run: sphinx-apidoc
-
       - name: Build docs
-        run: pip3 install sphinx && cd ./scripts && source buildDocs.bash
+        run: cd ./scripts && PATH="$HOME/.local/bin:$PATH" source buildDocs.bash
 
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
