@@ -17,13 +17,16 @@ jobs:
         run: sudo apt-get update
 
       - name: Install TexLive & Sphinx
-        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng python3-sphinx
+        run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng
 
       - name: Install required Sphinx extensions
         run: cd ./scripts && pip3 install -r requirements.txt
 
+      - name: Test sphinx
+        run: sphinx-apidoc
+
       - name: Build docs
-        run: cd ./scripts && source buildDocs.bash
+        run: pip3 install sphinx && cd ./scripts && source buildDocs.bash
 
       - name: GH Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
