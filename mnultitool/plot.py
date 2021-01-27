@@ -18,7 +18,7 @@ def plotVector(title: str, ax, vec: np.ndarray, showLegendColorbar: bool = True)
     cax = ax.matshow(np.transpose(vec.reshape(len(vec), 1)))
 
     if showLegendColorbar:
-        ax.colorbar(cax, location="bottom")
+        plt.colorbar(ax=ax, cax=cax, location="bottom")
 
 
 def plotMatrixAndVector(A: np.ndarray, b: np.ndarray, bigTitle: str = "Visualization of matrix A & vector b", matrixTitle: str = "Matrix A", vectorTitle: str = "Vector b", figsize=None) -> Tuple[Any, Tuple[Axes, Axes]]:
@@ -46,6 +46,8 @@ def plotMatrixAndVector(A: np.ndarray, b: np.ndarray, bigTitle: str = "Visualiza
     ax1.set_title(matrixTitle)
     cax1 = ax1.matshow(A)
     fig.colorbar(cax1, location="top")
+
+    plotVector(vectorTitle, ax2, b, False)
 
     fig.show()
 
