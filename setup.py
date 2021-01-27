@@ -6,7 +6,7 @@ with open("README.md") as f:
 
 setup(
     name='mnultitool',
-    version='1.0.2',
+    version='1.0.3',
     description='A multitool for Numerical Methods',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -27,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
     ],
     keywords='numerical,math,interpolation',
-    package_dir={'': 'mnultitool'},
+
+    packages=find_packages(),
     python_requires='>=3.6, <4',
 )
