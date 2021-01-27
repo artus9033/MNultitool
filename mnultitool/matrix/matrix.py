@@ -3,6 +3,7 @@ import numpy as np
 import scipy.linalg as spLinalg
 
 from ..misc.utils import isType
+from .classification import isMatrixDiagDominant
 
 
 def svdAndReconstruction(A: np.ndarray, singularValues: np.ndarray) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
@@ -182,74 +183,20 @@ def eqSysLUAndSolveJacobi(A: np.ndarray, b: np.ndarray, x_init: np.ndarray,
     return x, maxiter
 
 
-def isMatrixDiagDominant(A: np.ndarray) -> bool:
-    """
-    Checks if matrix is strictly diagonally dominated
-
-    :param A: the matrix to be checked
-
-    :raises ValueError: If the supplied np.ndarray does not have exactly 2 dimensions or it is not square
-
-    :return: whether the matrix is strictly diagonally dominated
-    """
-
-    if not isType(A, np.ndarray) or len(A.shape) != 2:
-        raise ValueError("A matrix must have exactly 2 dimensions")
-
-    m, shouldBeM = A.shape
-    if m != shouldBeM:
-        raise ValueError(
-            f"The matrix has to be square, while a shape of ({m}, {shouldBeM}) was supplied")
-
-    diagVals = np.diag(np.abs(A))
-    rowSumsExclDiag = np.sum(np.abs(A), axis=1) - diagVals
-
-    if np.all(diagVals > rowSumsExclDiag):
-        return True
-    else:
-        return False
-
-
-def isMatrixSymmetric(A: np.ndarray) -> bool:
-    """
-    Checks if a square matrix is symmetric
-
-    :param A: the matrix to be checked
-
-    :raises ValueError: If the supplied np.ndarray does not have exactly 2 dimensions or it is not square
-
-    :return: whether the matrix is symmetric
-    """
-
-    if not isType(A, np.ndarray) or len(A.shape) != 2:
-        raise ValueError("A matrix must have exactly 2 dimensions")
-
-    m, shouldBeM = A.shape
-    if m != shouldBeM:
-        raise ValueError(
-            f"The matrix has to be square, while a shape of ({m}, {shouldBeM}) was supplied")
-
-    for i in range(0, m):
-        for j in range(0, round(len(A[i]) / 2)):
-            if i != j and A[i][j] != A[j][i]:
-                return False
-
-    return True
-
-
 def frobeniusFromPolyCoeffs(coeffs: List[float]) -> np.ndarray:
     """
     Generates a Frobenius matrix for a given list of polynomial coefficients, ordered from the one next to the highest power of x, to the one next to the lowest (that is, just a scalar)
 
-    For example, w(x) = 5x^3 + 4x - 3 => coeffs = [5, 0, 4, -3]
+    For example: w(x) = 5x^3 + 4x - 3 => coeffs = [5, 0, 4, -3]
 
     .. math::
-        \\begin{vmatrix} \
-              &   1  &           &               & \\ \
-              &      &  \ddots   &               & \\ \
-              &      &           &        1      & \\ \
-        -a_0  & -a_1 &  \dots    &    -a_{n-1}   & \
-        \end{vmatrix}
+        \\setcounter{MaxMatrixCols}{20}
+        \\begin{vmatrix}
+            1     &            &           &                  \\\\
+                  &  \\ddots   &           &                  \\\\
+                  &            &     1     &                  \\\\
+            -a_0  &    -a_1    &  \\dots   &    -a_{n-1}
+        \\end{vmatrix}
 
     :raises ValueError: when the input is not a list, or the first coefficient is equal to 0 (and cannot be a divisor then)
 
