@@ -1,0 +1,7 @@
+mnultitool
+==========
+
+.. toctree::
+   :maxdepth: 4
+
+   mnultitool

@@ -1,0 +1,26 @@
+mnultitool.interpolate package
+==============================
+
+.. automodule:: mnultitool.interpolate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+mnultitool.interpolate.spline module
+------------------------------------
+
+.. automodule:: mnultitool.interpolate.spline
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mnultitool.interpolate.utils module
+-----------------------------------
+
+.. automodule:: mnultitool.interpolate.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

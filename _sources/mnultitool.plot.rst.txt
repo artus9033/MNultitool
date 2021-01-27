@@ -1,0 +1,18 @@
+mnultitool.plot package
+=======================
+
+.. automodule:: mnultitool.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+mnultitool.plot.plot module
+---------------------------
+
+.. automodule:: mnultitool.plot.plot
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,42 @@
+mnultitool.misc package
+=======================
+
+.. automodule:: mnultitool.misc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+mnultitool.misc.approximate module
+----------------------------------
+
+.. automodule:: mnultitool.misc.approximate
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mnultitool.misc.norm module
+---------------------------
+
+.. automodule:: mnultitool.misc.norm
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mnultitool.misc.rigid module
+----------------------------
+
+.. automodule:: mnultitool.misc.rigid
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mnultitool.misc.utils module
+----------------------------
+
+.. automodule:: mnultitool.misc.utils
+   :members:
+   :undoc-members:
+   :show-inheritance:

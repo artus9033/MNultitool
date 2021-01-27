@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>mnultitool.misc package &mdash; MNultitool  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mnultitool.interpolate package" href="mnultitool.interpolate.html" />
+    <link rel="prev" title="M(N)ultitool - a multitool for Numerical Methods" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MNultitool
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Miscellanous:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mnultitool.misc package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mnultitool.misc.approximate">mnultitool.misc.approximate module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mnultitool.misc.norm">mnultitool.misc.norm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mnultitool.misc.rigid">mnultitool.misc.rigid module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mnultitool.misc.utils">mnultitool.misc.utils module</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Interpolation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mnultitool.interpolate.html">mnultitool.interpolate package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Plotting:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mnultitool.plot.html">mnultitool.plot package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Matrix operations:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mnultitool.matrix.html">mnultitool.matrix package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">All modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mnultitool</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mnultitool.html">mnultitool package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mnultitool.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mnultitool.interpolate.html">mnultitool.interpolate package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mnultitool.matrix.html">mnultitool.matrix package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mnultitool.misc package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mnultitool.plot.html">mnultitool.plot package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Indices and tables</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manual/indices_and_tables.html">Indices and tables</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MNultitool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>mnultitool.misc package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/mnultitool.misc.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-mnultitool.misc">
+<span id="mnultitool-misc-package"></span><h1>mnultitool.misc package<a class="headerlink" href="#module-mnultitool.misc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-mnultitool.misc.approximate">
+<span id="mnultitool-misc-approximate-module"></span><h2>mnultitool.misc.approximate module<a class="headerlink" href="#module-mnultitool.misc.approximate" title="Permalink to this headline">¶</a></h2>
+<p><strong>Functions:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.approximate.approxZeroBisection" title="mnultitool.misc.approximate.approxZeroBisection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">approxZeroBisection</span></code></a>(a, b, f, epsilon, iteration)</p></td>
+<td><p>Approximates the solution to f(x) = 0 in range [a, b] using bisection method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.misc.approximate.approxZeroNewton" title="mnultitool.misc.approximate.approxZeroNewton"><code class="xref py py-obj docutils literal notranslate"><span class="pre">approxZeroNewton</span></code></a>(f, df, ddf, a, b, epsilon, …)</p></td>
+<td><p>Approximates the solution to f(x) = 0 in range [a, b] using Newton’s method</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.approximate.approxZeroSecant" title="mnultitool.misc.approximate.approxZeroSecant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">approxZeroSecant</span></code></a>(a, b, f, epsilon, iteration)</p></td>
+<td><p>Approximates the solution to f(x) = 0 in range [a, b] using secant method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.misc.approximate.coskx1" title="mnultitool.misc.approximate.coskx1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coskx1</span></code></a>(k, x)</p></td>
+<td><p>Computes an approximation of cos(kx) using the formula:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.approximate.cossinkx2" title="mnultitool.misc.approximate.cossinkx2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cossinkx2</span></code></a>(k, x)</p></td>
+<td><p>Computes an approximation of cos(kx) &amp; sin(kx) using the formulas:</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.misc.approximate.exponential" title="mnultitool.misc.approximate.exponential"><code class="xref py py-obj docutils literal notranslate"><span class="pre">exponential</span></code></a>(x, n)</p></td>
+<td><p>Computes an approximation of e^x</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.approximate.pi" title="mnultitool.misc.approximate.pi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pi</span></code></a>(n)</p></td>
+<td><p>Computes an approximate value of Pi, using the formula:</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="mnultitool.misc.approximate.approxZeroBisection">
+<code class="sig-prename descclassname">mnultitool.misc.approximate.</code><code class="sig-name descname">approxZeroBisection</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">epsilon</span></em>, <em class="sig-param"><span class="n">iteration</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.approximate.approxZeroBisection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approximates the solution to f(x) = 0 in range [a, b] using bisection method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – left range bound</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – right range bound</p></li>
+<li><p><strong>f</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable`[[:py:class:`float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – callable function of variable x</p></li>
+<li><p><strong>epsilon</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – the desired precision (stop condition)</p></li>
+<li><p><strong>iteration</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – maximum iterations count limit (to prevent an infinite loop)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – when input types are wrong or f has same signs on both range bounds</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple`[:py:class:`float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple containing (in order): an approximate solution x, iterations made count</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.approximate.approxZeroNewton">
+<code class="sig-prename descclassname">mnultitool.misc.approximate.</code><code class="sig-name descname">approxZeroNewton</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">df</span></em>, <em class="sig-param"><span class="n">ddf</span></em>, <em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">epsilon</span></em>, <em class="sig-param"><span class="n">iteration</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.approximate.approxZeroNewton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approximates the solution to f(x) = 0 in range [a, b] using Newton’s method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable`[[:py:class:`float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – callable function of variable x</p></li>
+<li><p><strong>df</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable`[[:py:class:`float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – callable derivate of f (f’)</p></li>
+<li><p><strong>ddf</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable`[[:py:class:`float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – callable second-order derivate of f (f’’)</p></li>
+<li><p><strong>a</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – left range bound</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – right range bound</p></li>
+<li><p><strong>epsilon</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – the desired precision (stop condition)</p></li>
+<li><p><strong>iteration</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – maximum iterations count limit (to prevent an infinite loop)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – when input types are wrong or either df or dff has same different on both range bounds</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple`[:py:class:`float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple containing (in order): an approximate solution x, iterations made count</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.approximate.approxZeroSecant">
+<code class="sig-prename descclassname">mnultitool.misc.approximate.</code><code class="sig-name descname">approxZeroSecant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">f</span></em>, <em class="sig-param"><span class="n">epsilon</span></em>, <em class="sig-param"><span class="n">iteration</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.approximate.approxZeroSecant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Approximates the solution to f(x) = 0 in range [a, b] using secant method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – left range bound</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – right range bound</p></li>
+<li><p><strong>f</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Callable`[[:py:class:`float</span></code>], <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – callable function of variable x</p></li>
+<li><p><strong>epsilon</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – the desired precision (stop condition)</p></li>
+<li><p><strong>iteration</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – maximum iterations count limit (to prevent an infinite loop)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – when input types are wrong or f has same signs on both range bounds</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple`[:py:class:`float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple containing (in order): an approximate solution x, iterations made count</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.approximate.coskx1">
+<code class="sig-prename descclassname">mnultitool.misc.approximate.</code><code class="sig-name descname">coskx1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">k</span></em>, <em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.approximate.coskx1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes an approximation of cos(kx) using the formula:</p>
+<div class="math">
+<p><img src="_images/math/b35b3dbacf26eb6b6f4e35b6ee6b4b77995dff8e.png" alt="cos((m+1)x) = 2cos(x) * cos(mx) - cos((m-1)x)"/></p>
+</div><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x</p></li>
+<li><p><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the approximated value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.approximate.cossinkx2">
+<code class="sig-prename descclassname">mnultitool.misc.approximate.</code><code class="sig-name descname">cossinkx2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">k</span></em>, <em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.approximate.cossinkx2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes an approximation of cos(kx) &amp; sin(kx) using the formulas:</p>
+<div class="math">
+<p><img src="_images/math/82f6bbf3908634bdf05ca60c7ebeab9f179ba32f.png" alt="cos(mx) = cosx \cdot cos(m-1)x - sinx \cdot sin(m-1)x"/></p>
+</div><div class="math">
+<p><img src="_images/math/defb60f7eda15a11c3097292c02471a103cab439.png" alt="sin(mx) = sinx \cdot cos(m-1)x + cosx \cdot sin(m-1)x"/></p>
+</div><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x</p></li>
+<li><p><strong>k</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple`[:py:class:`float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>approximated cos(kx) and sin(kx) values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.approximate.exponential">
+<code class="sig-prename descclassname">mnultitool.misc.approximate.</code><code class="sig-name descname">exponential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">n</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.approximate.exponential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes an approximation of e^x</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>]) – x</p></li>
+<li><p><strong>k</strong> – k</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the approximated value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.approximate.pi">
+<code class="sig-prename descclassname">mnultitool.misc.approximate.</code><code class="sig-name descname">pi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.approximate.pi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes an approximate value of Pi, using the formula:</p>
+<div class="math">
+<p><img src="_images/math/d7b538a5cfaa853b90420fc1e159b807562a4c73.png" alt="\sum_{n=1}^{\infty} \cfrac{1}{n^2} = \cfrac{1}{6} \pi^2"/></p>
+</div><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>n</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – the amount of sum elements</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the approximated value of pi</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mnultitool.misc.norm">
+<span id="mnultitool-misc-norm-module"></span><h2>mnultitool.misc.norm module<a class="headerlink" href="#module-mnultitool.misc.norm" title="Permalink to this headline">¶</a></h2>
+<p><strong>Functions:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.norm.maxNorm" title="mnultitool.misc.norm.maxNorm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">maxNorm</span></code></a>(xr, x)</p></td>
+<td><p>Computes the max norm (sometimes called the ‘infinity norm’) of scalars or vectors; both arguments’ dimensions must be compatible</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.misc.norm.residualNorm" title="mnultitool.misc.norm.residualNorm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">residualNorm</span></code></a>(A, x, b)</p></td>
+<td><p>Computes the matrix norm of the residues of an equation in a form of Ax = b</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="mnultitool.misc.norm.maxNorm">
+<code class="sig-prename descclassname">mnultitool.misc.norm.</code><code class="sig-name descname">maxNorm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">xr</span></em>, <em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.norm.maxNorm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the max norm (sometimes called the ‘infinity norm’) of scalars or vectors; both arguments’ dimensions must be compatible</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>xr</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – precise value, either a scalar or a vector of shape (n, 1)</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – approximate value, either a scalar or a vector of shape (n, 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the value of the norm, max(abs(xr - x))</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.norm.residualNorm">
+<code class="sig-prename descclassname">mnultitool.misc.norm.</code><code class="sig-name descname">residualNorm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.norm.residualNorm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the matrix norm of the residues of an equation in a form of Ax = b</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – matrix A (m, m) containing the equation’s coefficients</p></li>
+<li><p><strong>x</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – vector x (m, 1) containing the equation’s solutions</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – vector b (m, 1) containing the equation’s right hand side’s coefficients</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>matrix norm value of the equation’s residues</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mnultitool.misc.rigid">
+<span id="mnultitool-misc-rigid-module"></span><h2>mnultitool.misc.rigid module<a class="headerlink" href="#module-mnultitool.misc.rigid" title="Permalink to this headline">¶</a></h2>
+<p><strong>Functions:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.rigid.cylinderArea" title="mnultitool.misc.rigid.cylinderArea"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cylinderArea</span></code></a>(r, h)</p></td>
+<td><p>Computes the total area of a cylinder</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.misc.rigid.fibonacci" title="mnultitool.misc.rigid.fibonacci"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fibonacci</span></code></a>(n)</p></td>
+<td><p>Computes the first n Fibonacci’s sequence elements</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="mnultitool.misc.rigid.cylinderArea">
+<code class="sig-prename descclassname">mnultitool.misc.rigid.</code><code class="sig-name descname">cylinderArea</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em>, <em class="sig-param"><span class="n">h</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.rigid.cylinderArea" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the total area of a cylinder</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – cylinder base radius</p></li>
+<li><p><strong>h</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – cylinder height</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cylinder area</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.rigid.fibonacci">
+<code class="sig-prename descclassname">mnultitool.misc.rigid.</code><code class="sig-name descname">fibonacci</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.rigid.fibonacci" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the first n Fibonacci’s sequence elements</p>
+<p>Parameters:
+:type n: <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>
+:param n: the amount of elements</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>n first Fibonacci’s sequence elements</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mnultitool.misc.utils">
+<span id="mnultitool-misc-utils-module"></span><h2>mnultitool.misc.utils module<a class="headerlink" href="#module-mnultitool.misc.utils" title="Permalink to this headline">¶</a></h2>
+<p><strong>Functions:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.utils.absoluteError" title="mnultitool.misc.utils.absoluteError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">absoluteError</span></code></a>(v, v_approx)</p></td>
+<td><p>Calculates an absolute error of two arguments, either scalars, or vectors</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.misc.utils.isType" title="mnultitool.misc.utils.isType"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isType</span></code></a>(val, typeArr)</p></td>
+<td><p>Helper that checks if the supplied value <code class="docutils literal notranslate"><span class="pre">val</span></code> is of a specific type or of a type present in <code class="docutils literal notranslate"><span class="pre">typeArr</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.misc.utils.relativeError" title="mnultitool.misc.utils.relativeError"><code class="xref py py-obj docutils literal notranslate"><span class="pre">relativeError</span></code></a>(v, v_approx)</p></td>
+<td><p>Calculates a relative error of two arguments, either scalars, or vectors</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="mnultitool.misc.utils.absoluteError">
+<code class="sig-prename descclassname">mnultitool.misc.utils.</code><code class="sig-name descname">absoluteError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em>, <em class="sig-param"><span class="n">v_approx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.utils.absoluteError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates an absolute error of two arguments, either scalars, or vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – precise value</p></li>
+<li><p><strong>v_approx</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – approximate value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>absolute error value or NaN if input data is ill-formed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.utils.isType">
+<code class="sig-prename descclassname">mnultitool.misc.utils.</code><code class="sig-name descname">isType</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em>, <em class="sig-param"><span class="n">typeArr</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.utils.isType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Helper that checks if the supplied value <code class="docutils literal notranslate"><span class="pre">val</span></code> is of a specific type or of a type present in <code class="docutils literal notranslate"><span class="pre">typeArr</span></code></p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.misc.utils.relativeError">
+<code class="sig-prename descclassname">mnultitool.misc.utils.</code><code class="sig-name descname">relativeError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">v</span></em>, <em class="sig-param"><span class="n">v_approx</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.misc.utils.relativeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates a relative error of two arguments, either scalars, or vectors</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>v</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – precise value</p></li>
+<li><p><strong>v_approx</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]) – approximate value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Union`[:py:class:`int</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>relative error value or NaN if input data is ill-formed</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="mnultitool.interpolate.html" class="btn btn-neutral float-right" title="mnultitool.interpolate package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="M(N)ultitool - a multitool for Numerical Methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, artus9033.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

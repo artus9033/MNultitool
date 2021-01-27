@@ -1,0 +1,26 @@
+mnultitool.matrix package
+=========================
+
+.. automodule:: mnultitool.matrix
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+mnultitool.matrix.classification module
+---------------------------------------
+
+.. automodule:: mnultitool.matrix.classification
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mnultitool.matrix.matrix module
+-------------------------------
+
+.. automodule:: mnultitool.matrix.matrix
+   :members:
+   :undoc-members:
+   :show-inheritance:

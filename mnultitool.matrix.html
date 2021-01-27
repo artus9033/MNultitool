@@ -1,0 +1,503 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>mnultitool.matrix package &mdash; MNultitool  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="mnultitool" href="modules.html" />
+    <link rel="prev" title="mnultitool.plot package" href="mnultitool.plot.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> MNultitool
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Miscellanous:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mnultitool.misc.html">mnultitool.misc package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Interpolation:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mnultitool.interpolate.html">mnultitool.interpolate package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Plotting:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="mnultitool.plot.html">mnultitool.plot package</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Matrix operations:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">mnultitool.matrix package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mnultitool.matrix.classification">mnultitool.matrix.classification module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-mnultitool.matrix.matrix">mnultitool.matrix.matrix module</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">All modules:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mnultitool</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="mnultitool.html">mnultitool package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="mnultitool.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="mnultitool.interpolate.html">mnultitool.interpolate package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">mnultitool.matrix package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mnultitool.misc.html">mnultitool.misc package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mnultitool.plot.html">mnultitool.plot package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Indices and tables</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="manual/indices_and_tables.html">Indices and tables</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">MNultitool</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>mnultitool.matrix package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/mnultitool.matrix.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-mnultitool.matrix">
+<span id="mnultitool-matrix-package"></span><h1>mnultitool.matrix package<a class="headerlink" href="#module-mnultitool.matrix" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-mnultitool.matrix.classification">
+<span id="mnultitool-matrix-classification-module"></span><h2>mnultitool.matrix.classification module<a class="headerlink" href="#module-mnultitool.matrix.classification" title="Permalink to this headline">¶</a></h2>
+<p><strong>Functions:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.matrix.classification.isMatrixDiagDominant" title="mnultitool.matrix.classification.isMatrixDiagDominant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMatrixDiagDominant</span></code></a>(A)</p></td>
+<td><p>Checks if matrix is strictly diagonally dominated</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.matrix.classification.isMatrixSymmetric" title="mnultitool.matrix.classification.isMatrixSymmetric"><code class="xref py py-obj docutils literal notranslate"><span class="pre">isMatrixSymmetric</span></code></a>(A)</p></td>
+<td><p>Checks if a square matrix is symmetric</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="mnultitool.matrix.classification.isMatrixDiagDominant">
+<code class="sig-prename descclassname">mnultitool.matrix.classification.</code><code class="sig-name descname">isMatrixDiagDominant</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.classification.isMatrixDiagDominant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if matrix is strictly diagonally dominated</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – the matrix to be checked</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the supplied np.ndarray does not have exactly 2 dimensions or it is not square</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>whether the matrix is strictly diagonally dominated</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.matrix.classification.isMatrixSymmetric">
+<code class="sig-prename descclassname">mnultitool.matrix.classification.</code><code class="sig-name descname">isMatrixSymmetric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.classification.isMatrixSymmetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks if a square matrix is symmetric</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – the matrix to be checked</p>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the supplied np.ndarray does not have exactly 2 dimensions or it is not square</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">bool</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>whether the matrix is symmetric</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mnultitool.matrix.matrix">
+<span id="mnultitool-matrix-matrix-module"></span><h2>mnultitool.matrix.matrix module<a class="headerlink" href="#module-mnultitool.matrix.matrix" title="Permalink to this headline">¶</a></h2>
+<p><strong>Functions:</strong></p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.matrix.matrix.eqSysLUAndSolveJacobi" title="mnultitool.matrix.matrix.eqSysLUAndSolveJacobi"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eqSysLUAndSolveJacobi</span></code></a>(A, b, x_init[, …])</p></td>
+<td><p>Transforms an equation system using LU decomposition and solves the equation system using Jacobi’s method</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.matrix.matrix.eqSysLeastSquaresAndSolve" title="mnultitool.matrix.matrix.eqSysLeastSquaresAndSolve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eqSysLeastSquaresAndSolve</span></code></a>(A, b)</p></td>
+<td><p>Transforms an equation system using the least squares method according to the formula:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.matrix.matrix.eqSysQRAndSolve" title="mnultitool.matrix.matrix.eqSysQRAndSolve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eqSysQRAndSolve</span></code></a>(A, b)</p></td>
+<td><p>Transforms an equation system using QR decomposition and solves the equation system using sp.linalg.solve_triangular</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.matrix.matrix.eqSysRectToSquare" title="mnultitool.matrix.matrix.eqSysRectToSquare"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eqSysRectToSquare</span></code></a>(A, b)</p></td>
+<td><p>Transforms an equation system with a rectangular matrix of coefficients, to an equation system with a square matrix Note: both the matrix &amp; the vector returned will be different from the inputs</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.matrix.matrix.eqSysSVDAndSolve" title="mnultitool.matrix.matrix.eqSysSVDAndSolve"><code class="xref py py-obj docutils literal notranslate"><span class="pre">eqSysSVDAndSolve</span></code></a>(A, b)</p></td>
+<td><p>Transforms an equation system using SVD decomposition and solves the equation system using sp.linalg.solve</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#mnultitool.matrix.matrix.frobeniusFromPolyCoeffs" title="mnultitool.matrix.matrix.frobeniusFromPolyCoeffs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">frobeniusFromPolyCoeffs</span></code></a>(coeffs)</p></td>
+<td><p>Generates a Frobenius matrix for a given list of polynomial coefficients, ordered from the one next to the highest power of x, to the one next to the lowest (that is, just a scalar)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#mnultitool.matrix.matrix.svdAndReconstruction" title="mnultitool.matrix.matrix.svdAndReconstruction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">svdAndReconstruction</span></code></a>(A, singularValues)</p></td>
+<td><p>Generates an SVD decomposition of matrix A &amp; reconstructs the matrix using these components and supplied singular values of matrix A</p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py function">
+<dt id="mnultitool.matrix.matrix.eqSysLUAndSolveJacobi">
+<code class="sig-prename descclassname">mnultitool.matrix.matrix.</code><code class="sig-name descname">eqSysLUAndSolveJacobi</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em>, <em class="sig-param"><span class="n">x_init</span></em>, <em class="sig-param"><span class="n">epsilon</span><span class="o">=</span><span class="default_value">1e-08</span></em>, <em class="sig-param"><span class="n">maxiter</span><span class="o">=</span><span class="default_value">100</span></em>, <em class="sig-param"><span class="n">checkNecessaryCondition</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.matrix.eqSysLUAndSolveJacobi" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an equation system using LU decomposition and solves the equation system using Jacobi’s method</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – a square coefficients matrix A of shape (m, m)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – vector of right hand side coefficients b of shape (m, 1)</p></li>
+<li><p><strong>x_init</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – initial solution of shape (m, 1)</p></li>
+<li><p><strong>epsilon</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code>) – the desired solution precision</p></li>
+<li><p><strong>maxiter</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>) – a maximum iterations limit (to prevent an infinite loop), a positive integer</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If either input is of invalid type, matrix A does not have exactly 2 dimensions, vector b is of invalid shape,        b’s first dimension does not match A’s, matrix A is not square, x_init has an invalid shape, epsilon or maxiter are not positive integers,            or matrix A is not strictly diagonally dominant (in such a case Jacobi’s method would not converge)</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a tuple containing (in order): eq sys solution x of shape (m, 1), L, U, iter, where L &amp; U are LU decomposition components         and iter is the number of iterations passed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.matrix.matrix.eqSysLeastSquaresAndSolve">
+<code class="sig-prename descclassname">mnultitool.matrix.matrix.</code><code class="sig-name descname">eqSysLeastSquaresAndSolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.matrix.eqSysLeastSquaresAndSolve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an equation system using the least squares method according to the formula:</p>
+<div class="math">
+<p><img src="_images/math/980f3cb47479183bb23b45c1b5b19efa05d79bac.png" alt="A^T Ax = A^T b"/></p>
+</div><p>and solves the equation system using sp.linalg.solve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – a square coefficients matrix A of shape (m, m)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – vector of right hand side coefficients b of shape (m, 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a tuple containing (in order): vector of eq sys solutions x, transformed matrix A^T A, transformed vector A^T b</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.matrix.matrix.eqSysQRAndSolve">
+<code class="sig-prename descclassname">mnultitool.matrix.matrix.</code><code class="sig-name descname">eqSysQRAndSolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.matrix.eqSysQRAndSolve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an equation system using QR decomposition and solves the equation system using sp.linalg.solve_triangular</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – a square coefficients matrix A of shape (m, m)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – vector of right hand side coefficients b of shape (m, 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a tuple containing (in order): vector of eq sys solutions x, Q, R where Q &amp; R are QR decomposition components</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.matrix.matrix.eqSysRectToSquare">
+<code class="sig-prename descclassname">mnultitool.matrix.matrix.</code><code class="sig-name descname">eqSysRectToSquare</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.matrix.eqSysRectToSquare" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an equation system with a rectangular matrix of coefficients, to an equation system with a square matrix
+Note: both the matrix &amp; the vector returned will be different from the inputs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – the rectangular coefficients matrix of shape (m, n)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – vector b of shape (m, 1), containg the right hand side coefficients</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When inputs’ types are incorrect or either shape is invalid</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>tuple containing a square matrix of shape size (n, n) &amp; a modified vector b of shape (n, 1)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.matrix.matrix.eqSysSVDAndSolve">
+<code class="sig-prename descclassname">mnultitool.matrix.matrix.</code><code class="sig-name descname">eqSysSVDAndSolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">b</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.matrix.eqSysSVDAndSolve" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transforms an equation system using SVD decomposition and solves the equation system using sp.linalg.solve</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – a square coefficients matrix A of shape (m, m)</p></li>
+<li><p><strong>b</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – vector of right hand side coefficients b of shape (m, 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a tuple containing (in order): vector of eq sys solutions x, U, S, V where U, S &amp; V are SVD decomposition components</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.matrix.matrix.frobeniusFromPolyCoeffs">
+<code class="sig-prename descclassname">mnultitool.matrix.matrix.</code><code class="sig-name descname">frobeniusFromPolyCoeffs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coeffs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.matrix.frobeniusFromPolyCoeffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates a Frobenius matrix for a given list of polynomial coefficients, ordered from the one next to the highest power of x, to the one next to the lowest (that is, just a scalar)</p>
+<p>For example: w(x) = 5x^3 + 4x - 3 =&gt; coeffs = [5, 0, 4, -3]</p>
+<div class="math">
+<p><img src="_images/math/f1c62dfbc5e8025ee8a73ded0e0b60d303c304d7.png" alt="\setcounter{MaxMatrixCols}{20}
+\begin{vmatrix}
+    1     &amp;            &amp;           &amp;                  \\
+          &amp;  \ddots   &amp;           &amp;                  \\
+          &amp;            &amp;     1     &amp;                  \\
+    -a_0  &amp;    -a_1    &amp;  \dots   &amp;    -a_{n-1}
+\end{vmatrix}"/></p>
+</div><dl class="field-list simple">
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><strong>ValueError</strong> – when the input is not a list, or the first coefficient is equal to 0 (and cannot be a divisor then)</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code></p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the Frobenius array corresponding to the polynomial with given coefficients</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="mnultitool.matrix.matrix.svdAndReconstruction">
+<code class="sig-prename descclassname">mnultitool.matrix.matrix.</code><code class="sig-name descname">svdAndReconstruction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">A</span></em>, <em class="sig-param"><span class="n">singularValues</span></em><span class="sig-paren">)</span><a class="headerlink" href="#mnultitool.matrix.matrix.svdAndReconstruction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates an SVD decomposition of matrix A &amp; reconstructs
+the matrix using these components and supplied singular values of matrix A</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>A</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – matrix A of shape (m, m)</p></li>
+<li><p><strong>singularValues</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>) – singular values vector of shape (m, 1)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><strong>ValueError</strong> – When inputs’ types are incorrect or either shape is invalid</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(U, S, V, M), where U, S &amp; V are SVD decomposition components &amp; M is the reconstruction of A</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="modules.html" class="btn btn-neutral float-right" title="mnultitool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mnultitool.plot.html" class="btn btn-neutral float-left" title="mnultitool.plot package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, artus9033.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
