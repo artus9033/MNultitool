@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: ./.github/actions/setup
+      - uses: /.github/actions/setup
 
       - name: Build docs
         run: cd ./scripts && PATH="$HOME/.local/bin:$PATH" source buildDocs.bash
@@ -34,7 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: ./.github/actions/setup
+      - uses: /.github/actions/setup
 
       - name: Build package
         run: cd scripts && PATH="$HOME/.local/bin:$PATH" source package.bash
