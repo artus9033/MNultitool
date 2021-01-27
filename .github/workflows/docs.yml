@@ -1,13 +1,11 @@
-name: Docs & PyPi
+name: Build & publish docs (GH pages)
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the master branch
 on:
   push:
     branches: [master]
 
 jobs:
-  publish-docs:
+  build-publish-docs:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,20 +25,3 @@ jobs:
           allow_empty_commit: false
           force_orphan: true
           publish_branch: gh-pages
-
-  publish-package:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: artus9033/MNultitool/.github/actions/setup@master
-
-      - name: Build package
-        run: cd scripts && PATH="$HOME/.local/bin:$PATH" source package.bash
-
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@master
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_API_TOKEN }}

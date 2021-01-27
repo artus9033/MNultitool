@@ -1,0 +1,24 @@
+name: Build & publish the package (PyPi)
+
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build-publish-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: artus9033/MNultitool/.github/actions/setup@master
+
+      - name: Build package
+        run: cd scripts && PATH="$HOME/.local/bin:$PATH" source package.bash
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_API_TOKEN }}
