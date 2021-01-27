@@ -1,0 +1,13 @@
+name: "Setup environment"
+description: "Installs python packages, dependencies, TexLive & Sphinx"
+runs:
+  using: "composite"
+  steps:
+    - name: Update APT caches
+      run: sudo apt-get update
+
+    - name: Install TexLive & Sphinx
+      run: sudo apt-get install texlive-base texlive-latex-recommended texlive-latex-extra dvipng python3-setuptools python3-wheel
+
+    - name: Install required python packages & Sphinx extensions
+      run: PATH="$HOME/.local/bin:$PATH" pip3 install -r requirements.txt
