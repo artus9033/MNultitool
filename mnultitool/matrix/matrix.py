@@ -1,8 +1,8 @@
-from typing import Tuple, cast
+from typing import List, Tuple, cast
 import numpy as np
 import scipy.linalg as spLinalg
 
-from .misc.utils import isType
+from ..misc.utils import isType
 
 
 def svdAndReconstruction(A: np.ndarray, singularValues: np.ndarray) -> Tuple[np.ndarray, np.ndarray, np.ndarray, np.ndarray]:
@@ -235,3 +235,49 @@ def isMatrixSymmetric(A: np.ndarray) -> bool:
                 return False
 
     return True
+
+
+def frobeniusFromPolyCoeffs(coeffs: List[float]) -> np.ndarray:
+    """
+    Generates a Frobenius matrix for a given list of polynomial coefficients, ordered from the one next to the highest power of x, to the one next to the lowest (that is, just a scalar)
+
+    For example, w(x) = 5x^3 + 4x - 3 => coeffs = [5, 0, 4, -3]
+
+    .. math::
+        \\begin{vmatrix} \
+              &   1  &           &               & \\ \
+              &      &  \ddots   &               & \\ \
+              &      &           &        1      & \\ \
+        -a_0  & -a_1 &  \dots    &    -a_{n-1}   & \
+        \end{vmatrix}
+
+    :raises ValueError: when the input is not a list, or the first coefficient is equal to 0 (and cannot be a divisor then)
+
+    :returns: the Frobenius array corresponding to the polynomial with given coefficients
+    """
+
+    if not isType(coeffs, List):
+        raise ValueError("Wrong input type")
+
+    if coeffs[0] == 0:
+        raise ValueError(
+            "The highest power's coefficient is equal to 0 (therefore cannot be a divisor)")
+
+    aBiggestPower, *coeffs = coeffs
+
+    coeffs = np.array(coeffs) / aBiggestPower
+
+    coeffsLen = len(coeffs)
+
+    frob = np.zeros(shape=(coeffsLen, coeffsLen))
+
+    # fill ones
+    for i in range(coeffsLen - 1):
+        frob[i][i + 1] = 1
+
+    # fill last row
+    lastRowInd = coeffsLen - 1
+    for i in range(coeffsLen):
+        frob[lastRowInd][len(frob[lastRowInd]) - i - 1] = -coeffs[i]
+
+    return frob

@@ -5,24 +5,24 @@
    :caption: Miscellanous:
 
    mnultitool.misc
-   
+
 .. toctree::
    :maxdepth: 4
    :caption: Interpolation:
 
    mnultitool.interpolate
-   
+
 .. toctree::
    :maxdepth: 4
    :caption: Plotting:
 
-   manual/plot
-   
+   mnultitool.plot
+
 .. toctree::
    :maxdepth: 4
    :caption: Matrix operations:
 
-   manual/matrix
+   mnultitool.matrix
 
 .. toctree::
    :maxdepth: 4

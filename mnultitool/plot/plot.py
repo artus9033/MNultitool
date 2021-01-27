@@ -1,7 +1,8 @@
 from typing import Any, Tuple, cast
-from matplotlib.axes import Axes
+
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.axes import Axes
 
 
 def plotVector(title: str, ax, vec: np.ndarray, showLegendColorbar: bool = True) -> None:
