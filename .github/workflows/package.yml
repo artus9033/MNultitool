@@ -1,4 +1,4 @@
-name: Build & publish the package (PyPi)
+name: Publish package (PyPi)
 
 on:
   push:

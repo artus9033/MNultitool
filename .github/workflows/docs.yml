@@ -1,4 +1,4 @@
-name: Build & publish docs (GH pages)
+name: Publish docs (GH pages)
 
 on:
   push:

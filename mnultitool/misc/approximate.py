@@ -1,4 +1,4 @@
-from typing import Tuple, Union
+from typing import Callable, Tuple, Union
 
 import numpy as np
 
@@ -126,3 +126,136 @@ def pi(n: int) -> float:
         return np.math.sqrt(acc * 6)
     else:
         return np.nan
+
+
+def approxZeroBisection(a: Union[int, float], b: Union[int, float], f: Callable[[float], float], epsilon: float, iteration: int) -> Tuple[float, int]:
+    """
+    Approximates the solution to f(x) = 0 in range [a, b] using bisection method
+
+    :param a: left range bound
+    :param b: right range bound
+    :param f: callable function of variable x
+    :param epsilon: the desired precision (stop condition)
+    :param iteration: maximum iterations count limit (to prevent an infinite loop)
+
+    :raises ValueError: when input types are wrong or f has same signs on both range bounds
+
+    :return: a tuple containing (in order): an approximate solution x, iterations made count 
+    """
+
+    if not isType(a, [int, float]) or not isType(b, [int, float]) or not isType(f, Callable) or not isType(epsilon, float) or not isType(iteration, int) or epsilon < 0 or iteration < 0 or b < a:
+        raise ValueError("Wrong input types")
+
+    if np.sign(f(a)) * np.sign(f(b)) >= 0:
+        raise ValueError(
+            "Function f has to be of different signs at the edges of the range [a, b]")
+
+    i = 0
+    c = (a + b) / 2
+    while np.abs(f(c)) > epsilon and i < iteration:
+        c = (a + b) / 2
+
+        if np.sign(f(a)) != np.sign(f(c)):
+            b = c
+        else:
+            a = c
+
+        i += 1
+
+    return c, i - 1
+
+
+def approxZeroSecant(a: float, b: float, f: Callable[[float], float], epsilon: float, iteration: int) -> Tuple[float, int]:
+    """
+    Approximates the solution to f(x) = 0 in range [a, b] using secant method
+
+    :param a: left range bound
+    :param b: right range bound
+    :param f: callable function of variable x
+    :param epsilon: the desired precision (stop condition)
+    :param iteration: maximum iterations count limit (to prevent an infinite loop)
+
+    :raises ValueError: when input types are wrong or f has same signs on both range bounds
+
+    :return: a tuple containing (in order): an approximate solution x, iterations made count 
+    """
+
+    if not isType(a, [int, float]) or not isType(b, [int, float]) or not isType(f, Callable) or not isType(epsilon, float) or not isType(iteration, int) or epsilon < 0 or iteration < 0 or b < a or np.sign(f(a)) * np.sign(f(b)) >= 0:
+        raise ValueError("Wrong input types")
+
+    if np.sign(f(a)) * np.sign(f(b)) >= 0:
+        raise ValueError(
+            "Function f has to be of different signs at the edges of the range [a, b]")
+
+    f_a = f(a)
+    f_b = f(b)
+    x0 = 0
+    i = 0
+    while iteration > -1 and (abs(a - b) > epsilon):
+        i += 1
+
+        if abs(f_a - f_b) < epsilon:
+            break
+
+        x0 = a - f(a) * (a - b) / (f(a) - f(b))
+        f0 = f(x0)
+
+        if abs(f0) < epsilon:
+            break
+
+        if f(a) * f0 < 0:
+            b = x0
+
+        elif f(b) * f0:
+            a = x0
+
+        elif f0 == 0:
+            return x0, iteration
+
+        iteration -= 1
+
+    return x0, i - 1
+
+
+def approxZeroNewton(f: Callable[[float], float], df: Callable[[float], float], ddf: Callable[[float], float], a: Union[int, float], b: Union[int, float], epsilon: float, iteration: int) -> Tuple[float, int]:
+    """
+    Approximates the solution to f(x) = 0 in range [a, b] using Newton's method
+
+    :param f: callable function of variable x
+    :param df: callable derivate of f (f')
+    :param ddf: callable second-order derivate of f (f'')
+    :param a: left range bound
+    :param b: right range bound
+    :param epsilon: the desired precision (stop condition)
+    :param iteration: maximum iterations count limit (to prevent an infinite loop)
+
+    :raises ValueError: when input types are wrong or either df or dff has same different on both range bounds
+
+    :return: a tuple containing (in order): an approximate solution x, iterations made count 
+    """
+
+    if not isType(a, [int, float]) or not isType(b, [int, float]) or not isType(f, Callable) or not isType(df, typing.Callable) \
+            or not isType(ddf, Callable) or not isType(epsilon, float) or not isType(iteration, int) or epsilon < 0 or iteration < 0 or b < a or np.sign(f(a)) * np.sign(f(b)) >= 0:
+        raise ValueError("Wrong input types")
+
+    if np.sign(df(a)) * np.sign(df(b)) <= 0:
+        raise ValueError(
+            "Df has to be of different signs at the edges of range [a, b]")
+
+    if np.sign(ddf(a)) * np.sign(ddf(b)) <= 0:
+        raise ValueError(
+            "Ddf has to be of different signs at the edges of range [a, b]")
+
+    x0 = a
+    for x0 in [a, b]:
+        if(f(x0) * ddf(x0) > 0):
+            # initial condition found
+            break
+
+    i = 0
+    while np.abs(f(x0)) > epsilon and i < iteration:
+        x0 = x0 - f(x0) / df(x0)
+
+        i += 1
+
+    return x0, i
