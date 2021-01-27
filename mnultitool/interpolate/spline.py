@@ -9,7 +9,7 @@ def firstOrderSpline(x: np.ndarray, y: np.ndarray):
     Computes the coefficients of a first order spline, according to the formulas:
 
     .. math::
-        a_k=\frac{y_{k+1}-y_k}{x_{k+1}-x_k}
+        a_k=\\frac{y_{k+1}-y_k}{x_{k+1}-x_k}
     .. math::
         b_k=y_k-a_k*x_k
 

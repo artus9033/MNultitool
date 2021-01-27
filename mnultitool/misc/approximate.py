@@ -80,9 +80,9 @@ def cossinkx2(k: int, x: Union[int, float]) -> Tuple[float, float]:
     Computes an approximation of cos(kx) & sin(kx) using the formulas:
 
     .. math::
-        cos(mx) = cosx \cdot cos(m-1)x - sinx \cdot sin(m-1)x
+        cos(mx) = cosx \\cdot cos(m-1)x - sinx \\cdot sin(m-1)x
     .. math::
-        sin(mx) = sinx \cdot cos(m-1)x + cosx \cdot sin(m-1)x
+        sin(mx) = sinx \\cdot cos(m-1)x + cosx \\cdot sin(m-1)x
 
     :param x: x
     :param k: k
@@ -109,7 +109,7 @@ def pi(n: int) -> float:
     """Computes an approximate value of Pi, using the formula:
 
     .. math::
-        \sum_{n=1}^{\infty} \cfrac{1}{n^2} = \cfrac{1}{6} \pi^2
+        \\sum_{n=1}^{\\infty} \\cfrac{1}{n^2} = \\cfrac{1}{6} \\pi^2
 
 
     :param n: the amount of sum elements
